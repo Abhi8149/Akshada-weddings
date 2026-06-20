@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshda Event Services | Pune's Trusted Wedding, Birthday & Corporate Event Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --ivory: #FDF6EC;
+            --saffron: #FF8A3D;
+            --maroon: #8B1E3F;
+            --emerald: #1F6F5C;
+            --charcoal: #2B2118;
+            --gold: #C9A227;
+            --white: #FFFFFF;
+            --light-saffron: #FFF0E0;
+            --light-maroon: #F5E0E6;
+            --light-emerald: #E0F0EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--saffron);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(255, 138, 61, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #e67a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 138, 61, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+
+        .btn-maroon {
+            background-color: var(--maroon);
+            color: var(--white);
+        }
+
+        .btn-emerald {
+            background-color: var(--emerald);
+            color: var(--white);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .gold-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(253, 246, 236, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 0.75rem 0;
+        }
+
+        .navbar.scrolled .logo,
+        .navbar.scrolled .nav-links a {
+            color: var(--charcoal);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--saffron);
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .navbar.scrolled .mobile-menu-btn {
+            color: var(--charcoal);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://kimi-web-img.moonshot.cn/img/jolevents.com/eabd2df9b6ea60ca67528e88b2df82bab2108831.png') center/cover no-repeat;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(43, 33, 24, 0.7), rgba(43, 33, 24, 0.85));
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            padding: 0 1.5rem;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background-color: var(--white);
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-item i {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+
+        .trust-item .number {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        .trust-item .label {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Category Selector */
+        .categories {
+            padding: 4rem 0;
+            background-color: var(--ivory);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card .card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        .category-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .card-wedding::after { background: linear-gradient(to top, rgba(139, 30, 63, 0.95), rgba(139, 30, 63, 0.4)); }
+        .card-birthday::after { background: linear-gradient(to top, rgba(255, 138, 61, 0.95), rgba(255, 138, 61, 0.4)); }
+        .card-corporate::after { background: linear-gradient(to top, rgba(31, 111, 92, 0.95), rgba(31, 111, 92, 0.4)); }
+
+        .category-card > *:not(.card-bg) {
+            position: relative;
+            z-index: 2;
+        }
+
+        .category-card i {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .category-card .explore {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .category-card:hover .explore {
+            gap: 0.75rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background-color: var(--ivory);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 20px;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+
+        .checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .checklist i {
+            color: var(--saffron);
+            font-size: 1.25rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        /* Services Breakdown */
+        .services {
+            padding: 4rem 0;
+        }
+
+        .service-category {
+            margin-bottom: 3rem;
+        }
+
+        .service-header {
+            padding: 1.25rem;
+            border-radius: 15px 15px 0 0;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .service-header.maroon { background-color: var(--maroon); }
+        .service-header.saffron { background-color: var(--saffron); }
+        .service-header.emerald { background-color: var(--emerald); }
+
+        .service-header h3 {
+            font-size: 1.25rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border-radius: 12px;
+            transition: background-color 0.3s;
+        }
+
+        .service-item:hover {
+            background-color: var(--ivory);
+        }
+
+        .service-item i {
+            font-size: 1.5rem;
+            color: var(--saffron);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item.maroon-theme i { color: var(--maroon); }
+        .service-item.saffron-theme i { color: var(--saffron); }
+        .service-item.emerald-theme i { color: var(--emerald); }
+
+        .service-item span {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        /* Process Timeline */
+        .process {
+            padding: 4rem 0;
+            background-color: var(--ivory);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            border-left: 2px dotted var(--gold);
+        }
+
+        .timeline-step {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-step .number {
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--saffron);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 3px solid var(--ivory);
+        }
+
+        .timeline-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--charcoal);
+        }
+
+        .timeline-step p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Portfolio Gallery */
+        .portfolio {
+            padding: 4rem 0;
+        }
+
+        .filter-pills {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-pill {
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-pill.active, .filter-pill:hover {
+            background-color: var(--saffron);
+            color: var(--white);
+            border-color: var(--saffron);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-tag {
+            position: absolute;
+            bottom: 0.75rem;
+            left: 0.75rem;
+            background-color: rgba(0,0,0,0.6);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Packages */
+        .packages {
+            padding: 4rem 0;
+            background-color: var(--ivory);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            border: 2px solid transparent;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .pricing-card.gold-border {
+            border-color: var(--gold);
+        }
+
+        .popular-ribbon {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--saffron);
+            color: var(--white);
+            padding: 0.35rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(255, 138, 61, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            color: var(--saffron);
+            margin-bottom: 1.5rem;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #999;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .pricing-features i {
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: var(--gold);
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-saffron);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            color: var(--saffron);
+            font-size: 1.25rem;
+        }
+
+        .client-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .client-info span {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .stars {
+            color: var(--saffron);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background-color: var(--maroon);
+            color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .contact-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-line i {
+            width: 2rem;
+            color: var(--gold);
+        }
+
+        .contact-form {
+            background-color: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border-radius: 12px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: 2px solid var(--saffron);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--charcoal);
+            color: var(--ivory);
+            padding: 2.5rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            display: inline-flex;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--saffron);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--saffron);
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .service-tag {
+            padding: 0.25rem 0.75rem;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50px;
+            font-size: 0.75rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: transform 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: var(--white);
+            z-index: 1001;
+            padding: 2rem;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--charcoal);
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-menu a {
+            font-weight: 600;
+            color: var(--charcoal);
+            font-size: 1.1rem;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .timeline {
+                flex-direction: row;
+                padding-left: 0;
+                padding-top: 2rem;
+            }
+
+            .timeline::before {
+                left: 0;
+                right: 0;
+                top: 1.25rem;
+                width: 100%;
+                height: 2px;
+                border-left: none;
+                border-top: 2px dotted var(--gold);
+            }
+
+            .timeline-step {
+                flex: 1;
+                text-align: center;
+                padding-left: 0;
+                padding-top: 2.5rem;
+            }
+
+            .timeline-step .number {
+                left: 50%;
+                top: -2rem;
+                transform: translateX(-50%);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+
+            .nav-links {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-om"></i>
+                Akshda
+            </a>
+            <ul class="nav-links">
+                <li><a href="#categories">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#categories" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+            <li><a href="#packages" onclick="toggleMenu()">Packages</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Turning Your Celebrations Into Unforgettable Memories</h1>
+            <p>Weddings • Birthdays • Corporate Events — Pune's Trusted Event Partner</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/918888399102" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Get Free Quote on WhatsApp
+                </a>
+                <a href="#portfolio" class="btn btn-outline">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="number">500+</div>
+                    <div class="label">Events Done</div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-award"></i>
+                    <div class="number">8+</div>
+                    <div class="label">Years Experience</div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star"></i>
+                    <div class="number">5.0★</div>
+                    <div class="label">Google Rating</div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <div class="number">100%</div>
+                    <div class="label">Personalized Decor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Selector -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Create</h2>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="category-grid">
+                <div class="category-card card-wedding">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.marriagecolours.com/443a8bd990ee9dc5149d8880d47b251028e8142c.jpg" alt="Wedding Decor" class="card-bg">
+                    <i class="fas fa-ring"></i>
+                    <h3>Weddings</h3>
+                    <p>From intimate ceremonies to grand receptions, we craft your dream wedding.</p>
+                    <span class="explore">Explore <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="category-card card-birthday">
+                    <img src="https://kimi-web-img.moonshot.cn/img/partyone.com/af2987d4c83ac90abf1f80772d138c0b443a5944.webp" alt="Birthday Decor" class="card-bg">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Birthdays & Celebrations</h3>
+                    <p>Memorable themes and joyful setups for every milestone celebration.</p>
+                    <span class="explore">Explore <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="category-card card-corporate">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.colorknitevents.com/5c47bb2811ba49b06985a885969d5fbad6033820.png" alt="Corporate Event" class="card-bg">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Corporate Events</h3>
+                    <p>Professional conferences, product launches, and team gatherings executed flawlessly.</p>
+                    <span class="explore">Explore <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://kimi-web-img.moonshot.cn/img/theoneupgroup.com/39d49546c05a500bbcf37c6263fb27f5ee28ca3d.jpg" alt="Akshda Event Team Behind the Scenes">
+                </div>
+                <div class="about-content">
+                    <h2>Your Vision, Perfectly Executed</h2>
+                    <ul class="checklist">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Budget-friendly packages tailored for Pune families and businesses</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>End-to-end planning & execution from concept to cleanup</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trusted local vendor network across Yerawada, Wagholi & Pune</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>On-time, stress-free delivery with dedicated event coordinators</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Breakdown -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <div class="gold-divider"></div>
+                <p>Comprehensive event solutions for every occasion</p>
+            </div>
+
+            <!-- Wedding Services -->
+            <div class="service-category">
+                <div class="service-header maroon">
+                    <i class="fas fa-heart"></i>
+                    <h3>Wedding Services</h3>
+                </div>
+                <div class="service-grid">
+                    <div class="service-item maroon-theme">
+                        <i class="fas fa-archway"></i>
+                        <span>Mandap & Stage Decor</span>
+                    </div>
+                    <div class="service-item maroon-theme">
+                        <i class="fas fa-utensils"></i>
+                        <span>Catering Coordination</span>
+                    </div>
+                    <div class="service-item maroon-theme">
+                        <i class="fas fa-camera"></i>
+                        <span>Photography & Videography</span>
+                    </div>
+                    <div class="service-item maroon-theme">
+                        <i class="fas fa-music"></i>
+                        <span>Sangeet & DJ Setup</span>
+                    </div>
+                    <div class="service-item maroon-theme">
+                        <i class="fas fa-users"></i>
+                        <span>Guest Management</span>
+                    </div>
+                    <div class="service-item maroon-theme">
+                        <i class="fas fa-female"></i>
+                        <span>Bridal Entry Themes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday Services -->
+            <div class="service-category">
+                <div class="service-header saffron">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Birthday & Celebration Services</h3>
+                </div>
+                <div class="service-grid">
+                    <div class="service-item saffron-theme">
+                        <i class="fas fa-balloon"></i>
+                        <span>Balloon & Theme Decor</span>
+                    </div>
+                    <div class="service-item saffron-theme">
+                        <i class="fas fa-baby"></i>
+                        <span>Baby Shower Setup</span>
+                    </div>
+                    <div class="service-item saffron-theme">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Game & Activity Coordination</span>
+                    </div>
+                    <div class="service-item saffron-theme">
+                        <i class="fas fa-cookie-bite"></i>
+                        <span>Cake & Dessert Table Design</span>
+                    </div>
+                    <div class="service-item saffron-theme">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>LED & Neon Signage</span>
+                    </div>
+                    <div class="service-item saffron-theme">
+                        <i class="fas fa-photo-video"></i>
+                        <span>Instant Photo Booth</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Services -->
+            <div class="service-category">
+                <div class="service-header emerald">
+                    <i class="fas fa-building"></i>
+                    <h3>Corporate Event Services</h3>
+                </div>
+                <div class="service-grid">
+                    <div class="service-item emerald-theme">
+                        <i class="fas fa-presentation-screen"></i>
+                        <span>Conference & Seminar Setup</span>
+                    </div>
+                    <div class="service-item emerald-theme">
+                        <i class="fas fa-rocket"></i>
+                        <span>Product Launch Events</span>
+                    </div>
+                    <div class="service-item emerald-theme">
+                        <i class="fas fa-handshake"></i>
+                        <span>Team Building Activities</span>
+                    </div>
+                    <div class="service-item emerald-theme">
+                        <i class="fas fa-trophy"></i>
+                        <span>Award Ceremonies</span>
+                    </div>
+                    <div class="service-item emerald-theme">
+                        <i class="fas fa-laptop"></i>
+                        <span>AV & Stage Production</span>
+                    </div>
+                    <div class="service-item emerald-theme">
+                        <i class="fas fa-glass-cheers"></i>
+                        <span>Gala Dinners & Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Work</h2>
+                <div class="gold-divider"></div>
+                <p>Four simple steps to your perfect event</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="number">1</div>
+                    <h4>Free Consultation</h4>
+                    <p>Share your vision, budget, and date with our team over a call or WhatsApp.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">2</div>
+                    <h4>Custom Quote & Package</h4>
+                    <p>Receive a detailed proposal with transparent pricing and package options.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">3</div>
+                    <h4>Design & Planning</h4>
+                    <p>We coordinate vendors, decor, and logistics while keeping you updated.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">4</div>
+                    <h4>Flawless Execution</h4>
+                    <p>Relax and enjoy your event while we handle every detail on-site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <div class="gold-divider"></div>
+                <p>Real events we've crafted across Pune</p>
+            </div>
+            <div class="filter-pills">
+                <button class="filter-pill active" onclick="filterGallery('all', this)">All</button>
+                <button class="filter-pill" onclick="filterGallery('wedding', this)">Weddings</button>
+                <button class="filter-pill" onclick="filterGallery('birthday', this)">Birthdays</button>
+                <button class="filter-pill" onclick="filterGallery('corporate', this)">Corporate</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item wide" data-category="wedding">
+                    <img src="https://kimi-web-img.moonshot.cn/img/jolevents.com/eabd2df9b6ea60ca67528e88b2df82bab2108831.png" alt="Wedding Mandap Decor">
+                    <span class="gallery-tag">Wedding</span>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.marriagecolours.com/443a8bd990ee9dc5149d8880d47b251028e8142c.jpg" alt="Sangeet Stage">
+                    <span class="gallery-tag">Wedding</span>
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://kimi-web-img.moonshot.cn/img/horaservices.com/d57f8fb38fb7cb712607827d227c1e2321d77751.jpg" alt="Birthday Balloon Decor">
+                    <span class="gallery-tag">Birthday</span>
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="https://kimi-web-img.moonshot.cn/img/5.imimg.com/a3d5b763ac4110239ec01d012b66b56eb048c357.jpg" alt="Corporate Conference">
+                    <span class="gallery-tag">Corporate</span>
+                </div>
+                <div class="gallery-item tall" data-category="wedding">
+                    <img src="https://kimi-web-img.moonshot.cn/img/partyone.com/af2987d4c83ac90abf1f80772d138c0b443a5944.webp" alt="Wedding Decor">
+                    <span class="gallery-tag">Wedding</span>
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://kimi-web-img.moonshot.cn/img/5.imimg.com/46246f430a71d45e2e622e7f40dada03ba133d17.jpg" alt="Kids Birthday Theme">
+                    <span class="gallery-tag">Birthday</span>
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="https://kimi-web-img.moonshot.cn/img/5.imimg.com/e61294fc145ad11777d43b1a2ff42ec734386ea3.jpg" alt="Corporate Stage">
+                    <span class="gallery-tag">Corporate</span>
+                </div>
+                <div class="gallery-item wide" data-category="corporate">
+                    <img src="https://kimi-web-img.moonshot.cn/img/5.imimg.com/b2cfac7858ab9e4d3c538e075eef2d6b6f1629dd.jpg" alt="Corporate Event Setup">
+                    <span class="gallery-tag">Corporate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Packages</h2>
+                <div class="gold-divider"></div>
+                <p>Transparent pricing for every budget</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Essential</h3>
+                    <div class="price">₹25,000 <span>onwards</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic decor setup</li>
+                        <li><i class="fas fa-check"></i> 1 event coordinator</li>
+                        <li><i class="fas fa-check"></i> Standard lighting</li>
+                        <li><i class="fas fa-check"></i> Vendor coordination</li>
+                        <li><i class="fas fa-check"></i> Basic sound system</li>
+                    </ul>
+                    <a href="https://wa.me/918888399102" target="_blank" class="btn btn-outline" style="color: var(--charcoal); border-color: var(--charcoal);">Enquire Now</a>
+                </div>
+                <div class="pricing-card gold-border">
+                    <div class="popular-ribbon">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">₹65,000 <span>onwards</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Premium themed decor</li>
+                        <li><i class="fas fa-check"></i> 2 dedicated coordinators</li>
+                        <li><i class="fas fa-check"></i> Advanced lighting & LED</li>
+                        <li><i class="fas fa-check"></i> DJ & sound system</li>
+                        <li><i class="fas fa-check"></i> Photography coverage</li>
+                        <li><i class="fas fa-check"></i> Custom floral arrangements</li>
+                    </ul>
+                    <a href="https://wa.me/918888399102" target="_blank" class="btn btn-primary">Enquire Now</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Signature</h3>
+                    <div class="price">₹1,50,000 <span>onwards</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Luxury bespoke design</li>
+                        <li><i class="fas fa-check"></i> Full event management team</li>
+                        <li><i class="fas fa-check"></i> Premium AV & stage production</li>
+                        <li><i class="fas fa-check"></i> Celebrity/artist coordination</li>
+                        <li><i class="fas fa-check"></i> Multi-day event planning</li>
+                        <li><i class="fas fa-check"></i> VIP guest management</li>
+                    </ul>
+                    <a href="https://wa.me/918888399102" target="_blank" class="btn btn-maroon">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Clients Say</h2>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="testimonial-header">
+                        <div class="client-avatar">P</div>
+                        <div class="client-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Wedding — March 2026</span>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Akshda made our wedding day absolutely magical. The mandap decoration was breathtaking and the team handled everything so professionally. Highly recommend them for anyone in Pune!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="testimonial-header">
+                        <div class="client-avatar">R</div>
+                        <div class="client-info">
+                            <h4>Rahul Mehta</h4>
+                            <span>Corporate Event — January 2026</span>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"We hired Akshda for our annual company gala and they exceeded expectations. The stage setup was world-class and the event flowed seamlessly. Great value for money."</p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="testimonial-header">
+                        <div class="client-avatar">S</div>
+                        <div class="client-info">
+                            <h4>Sneha Patil</h4>
+                            <span>Birthday Party — December 2025</span>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"My daughter's 5th birthday was a dream come true thanks to Akshda. The balloon theme and cake table were gorgeous. They truly listen to what you want and deliver perfectly."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Plan Something Beautiful Together</h2>
+                    <div class="contact-lines">
+                        <div class="contact-line">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 88883 99102</span>
+                        </div>
+                        <div class="contact-line">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+91 88883 99102 (WhatsApp)</span>
+                        </div>
+                        <div class="contact-line">
+                            <i class="fas fa-envelope"></i>
+                            <span>akshdaevents@gmail.com</span>
+                        </div>
+                        <div class="contact-line">
+                            <i class="fab fa-instagram"></i>
+                            <span>@akshdaevents</span>
+                        </div>
+                        <div class="contact-line">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>No 1, Pune Nagar Rd, Yerawada, Pune, Maharashtra 411006</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Event Type</label>
+                            <select required>
+                                <option value="">Select event type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday / Celebration</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Event Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your event requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-om"></i>
+                        Akshda
+                    </a>
+                    <p>Pune's trusted partner for weddings, birthdays, and corporate events. Creating memories that last a lifetime.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Wedding Planning</a></li>
+                        <li><a href="#">Birthday Decor</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Venue Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Service Areas</h4>
+                    <div class="service-tags">
+                        <span class="service-tag">Yerawada</span>
+                        <span class="service-tag">Wagholi</span>
+                        <span class="service-tag">Kharadi</span>
+                        <span class="service-tag">Viman Nagar</span>
+                        <span class="service-tag">Koregaon Park</span>
+                        <span class="service-tag">Pune City</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Akshda Event Services. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--saffron);"></i> in Pune</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918888399102" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+
+        // Portfolio filter
+        function filterGallery(category, btn) {
+            // Update active button
+            document.querySelectorAll('.filter-pill').forEach(pill => pill.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filter items
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry! We will contact you shortly on WhatsApp or call you back.');
+            e.target.reset();
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
